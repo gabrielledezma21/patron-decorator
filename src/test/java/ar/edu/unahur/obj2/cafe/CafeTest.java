@@ -26,4 +26,19 @@ public class CafeTest {
 
     }
 
+    @Test
+    public void testCostoCafeConLecheConAzucar(){
+        Double valorCafe = 100.0;
+        ICafe cafe = new Cafe(valorCafe);
+
+        Double valorLeche = 15.0;
+        ICafe cafeConLeche = new Leche(cafe, valorLeche);
+
+        Double valorAzucar = 5.0;
+        ICafe cafeConLecheConAzucar = new Azucar(cafeConLeche, valorAzucar);
+
+        assertEquals(valorCafe + valorLeche + valorAzucar, cafeConLecheConAzucar.costo());
+
+    }
+
 }
