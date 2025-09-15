@@ -13,4 +13,18 @@ public class Cafe implements ICafe {
         return this.costo;
     }
 
+    private String nombre(){
+        return "Café";
+    }
+
+    @Override
+    public String nombrePosDecorado() {
+        return this.nombre();
+    }
+
+    @Override
+    public String nombrePreDecorado() {
+        return this.nombre();
+    }
+
 }

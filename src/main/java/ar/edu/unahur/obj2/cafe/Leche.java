@@ -14,4 +14,9 @@ public class Leche extends CafeDecorator {
         return this.costo;
     }
 
+    @Override
+    public String doNombre() {
+        return "Leche";
+    }
+
 }

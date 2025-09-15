@@ -15,4 +15,16 @@ public abstract class CafeDecorator implements ICafe {
 
     public abstract Double doCosto();
 
+    @Override
+    public String nombrePosDecorado() {
+        return decorado.nombrePosDecorado() + " " + doNombre();
+    }
+
+    public abstract String doNombre();
+
+    @Override
+    public String nombrePreDecorado() {
+        return doNombre() + " " + decorado.nombrePreDecorado();
+    }
+
 }

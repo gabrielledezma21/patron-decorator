@@ -4,4 +4,8 @@ public interface ICafe {
 
     Double costo();
 
+    String nombrePosDecorado();
+
+    String nombrePreDecorado();
+
 }

@@ -14,4 +14,9 @@ public class Azucar extends CafeDecorator {
         return this.costo;
     }
 
+    @Override
+    public String doNombre() {
+        return "Azúcar";
+    }
+
 }

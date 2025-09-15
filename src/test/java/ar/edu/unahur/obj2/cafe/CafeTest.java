@@ -41,4 +41,27 @@ public class CafeTest {
 
     }
 
+    @Test
+    public void testNombrePosDecorado(){
+
+        ICafe cafe = new Cafe(100.0);
+
+        ICafe cafeConLeche = new Leche(cafe, 15.0);
+
+        ICafe cafeConLecheConAzucar = new Azucar(cafeConLeche, 5.0);
+
+        assertEquals("Café Leche Azúcar", cafeConLecheConAzucar.nombrePosDecorado());
+
+    }
+
+    @Test
+    public void testNombrePreDecorado(){
+
+        //es igual al test anterior pero sin crear variables intermedias
+        ICafe cafeConLecheConAzucar = new Azucar(new Leche(new Cafe(100.0), 15.0), 5.0);
+
+        assertEquals("Azúcar Leche Café", cafeConLecheConAzucar.nombrePreDecorado());
+
+    }
+
 }
