@@ -8,4 +8,10 @@ public abstract class CafeDecorator implements ICafe {
         this.decorado = decorado;
     }
 
+    public Double costo() {
+        return decorado.costo() + doCosto();
+    }
+
+    public abstract Double doCosto();
+
 }

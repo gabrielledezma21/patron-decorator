@@ -10,8 +10,8 @@ public class Leche extends CafeDecorator {
     }
 
     @Override
-    public Double costo() {
-        return decorado.costo() + this.costo;
+    public Double doCosto() {
+        return this.costo;
     }
 
 }
